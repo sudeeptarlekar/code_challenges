@@ -1,9 +1,4 @@
-import pdb
 from list import Node, LList
-
-__list1 = LList()
-__list2 = LList()
-__answer_list = LList()
 
 def take_input(msg):
     print(msg)
@@ -12,6 +7,8 @@ def take_input(msg):
 
 
 def main():
+    __list1 = LList()
+    __list2 = LList()
     list1 = take_input("Insert elements for List1")
     for i in list1:
         __list1.insert(i)
@@ -27,7 +24,6 @@ def main():
 
 
 def list_addition(node1, node2, quo):
-    pdb.set_trace()
     if not (node1 or node2):
         if quo != 0:
             return Node(quo)
@@ -37,15 +33,12 @@ def list_addition(node1, node2, quo):
     node1_value = node1.value if node1 else 0
     node2_value = node2.value if node2 else 0
 
-    pdb.set_trace()
     addition = node1_value + node2_value + quo
     value = addition % 10
     quotient = int((addition - value)/10)
 
-    pdb.set_trace()
     next_node1 = node1.next if node1 else None
     next_node2 = node2.next if node2 else None
 
     node = list_addition(next_node1, next_node2, quotient)
-    pdb.set_trace()
     return Node(value, node)
