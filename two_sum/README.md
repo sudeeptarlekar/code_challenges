@@ -1,3 +1,5 @@
+[![](https://img.shields.io/badge/difficulty-easy-brightgreen.svg)]()
+
 # Two Sum
 
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
